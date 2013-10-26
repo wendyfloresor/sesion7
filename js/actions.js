@@ -115,7 +115,8 @@ function nuevoContacto(nom,tel,mail){
 function leerContactos(){
 	document.addEventListener("deviceready",function(){
 		function onSuccess(contacts) {
-            for(i=0; i<contacts.lenght;i++){
+            $('#lcontacto').html('');
+			for(i=0; i<contacts.lenght;i++){
 				$('#lcontacto').append('<li><a href="tel:'+contacts[i].phoneNumbers[0].value+'">'+contacts[i].name.formated+'<a/></li>');
 			}
 		};
